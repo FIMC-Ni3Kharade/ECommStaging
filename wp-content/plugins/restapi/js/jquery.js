@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
     console.log('scc');
 
 
-    $(document).on('click', '.btnServiceCall', function () {
+    $(document).on('click', '#btnServiceCall', function () {
         var btn=this;
         $.get("https://reqres.in/api/users", function (response) {
             $content=$(btn).siblings('.serviceData');

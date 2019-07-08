@@ -23,7 +23,7 @@ function my_thank_you_text ( $content ) {
 // 	foreach($json_api->data as $row){
 // 		$content .=  '<br/>id: '.$row->id.' email:'.$row->email.' first_name:'.$row->first_name.' last_name:'.$row->last_name;
 // 	}
-		$content.='<button class="btnServiceCall">Call Service</button><div class="serviceData"></div>';	
+		$content.='<button id="btnServiceCall" class="et_pb_button et_pb_button_0 et_pb_bg_layout_light">Call Service</button><div class="serviceData"></div>';	
     return $content;
 }
 
