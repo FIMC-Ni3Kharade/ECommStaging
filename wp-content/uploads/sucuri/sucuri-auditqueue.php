@@ -28,3 +28,7 @@ exit(0);
 1561984710_2061:"Warning: fimc1440, 65.196.155.44; User account edited; ID: 8; name: nkharade@fimc.com; old_name: nkharade@fimc.com; email: nkharade@fimc.com; old_email: nkharade@fimc.com; roles: administrator; old_roles: administrator"
 1561987413_8879:"Warning: nkharade@fimc.com, 173.45.170.132; Post deleted: (multiple entries): Post id: 5537,Post author: 8,Post type: revision,Post status: inherit,Post inserted: 2019-07-01 12:22:39,Post modified: 2019-07-01 12:22:39,Post guid: http:\/\/mng.b0b.myftpupload.com\/2019\/07\/5523-autosave-v1\/,Post title: (empty)"
 1561987495_2298:"Warning: nkharade@fimc.com, 173.45.170.132; Plugin activated: Revisr (v2.0.2; revisr\/revisr.php)"
+1563123573_2118:"Warning: nkharade@fimc.com, 173.45.170.132; Plugin installed: EComm.zip"
+1563123573_9199:"Notice: nkharade@fimc.com, 173.45.170.132; Media file added; ID: 5598; name: EComm.zip; type: "
+1563123575_6068:"Warning: nkharade@fimc.com, 173.45.170.132; Post deleted: (multiple entries): Post id: 5598"
+1563123580_7638:"Warning: nkharade@fimc.com, 173.45.170.132; Plugin activated: ECommerce (v1.0; EComm\/ecommerce.php)"
