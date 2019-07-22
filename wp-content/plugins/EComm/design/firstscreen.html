@@ -6,6 +6,14 @@
 </div>
 <br />
 <div class="wbox">
+    <div id="divPricingSteps" class="hidden">
+        <span id="btnPricingSteps1" data-step-no="1" data-step-id="productDetails" class="badge active active-last">1</span>
+        <span id="btnPricingSteps2" data-step-no="2" data-step-id="memberDetails" class="badge">2</span>
+        <span id="btnPricingSteps3" data-step-no="3" data-step-id="divDependentInfo" class="badge">3</span>
+        <span id="btnPricingSteps4" data-step-no="4" data-step-id="cardDetails" class="badge">4</span>
+        <span id="btnPricingSteps5" data-step-no="5" data-step-id="successfulDetails" class="badge">5</span>
+    </div>
+
     <div id="pricingTable">
         <?php include '1.html';?>
     </div>
@@ -18,6 +26,9 @@
     <div id="memberDetails" class="hidden">
         <?php include '5.html';?>
     </div>
+    <div id="divDependentInfo" class="hidden">
+        <?php include '5a.html';?>
+    </div>
     <div id="cardDetails" class="hidden">
         <?php include '6.html';?>
     </div>
@@ -25,3 +36,103 @@
         <?php include '7.html';?>
     </div>
 </div>
+
+<div id="modalAddressValidation" class="modal fade addressModal" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    Verify your address details
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="font-size: 14px !important;">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <div id="bottomSearchContainer" class="searchContainer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="button" id="btnCancel11" data-dismiss="modal" value="Cancel" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="divLoading" class="modal" tabindex="-1" role="dialog" style="opacity: 0.6!important; background-color: #000;">
+    <div class="modal-dialog" style="margin-top: 300px;">
+        <center>
+            <img src="../wp-content/plugins/EComm/images/loader.gif" />
+        </center>
+    </div>
+</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        var options = {
+            elements: {
+                input: document.querySelector(".search"),
+                countryList: document.querySelector("select")
+            }
+        };
+
+        // Initialise this instance
+        var address = new ContactDataServices.address(options);
+        var options1 = {
+            elements: {
+                input: document.querySelector(".search1"),
+                countryList: document.querySelector("select")
+            }
+        };
+
+        // Initialise this instance
+        var address1 = new ContactDataServices.address(options1);
+
+        // Show the spinner while we're searching for the formatted address
+        address.events.on("pre-formatting-search", function () {
+            //  document.querySelector(".loader").classList.remove("hidden");
+        });
+
+        // Hide the country and search input when a result is found
+        address.events.on("post-formatting-search", function () {
+            var searchInputs = document.querySelectorAll(".toggle");
+            for (var i = 0; i < searchInputs.length; ++i) {
+                //searchInputs[i].classList.add("hidden");
+            }
+
+            // Hide the spinner
+            //document.querySelector(".loader").classList.add("hidden");
+
+        });
+
+
+        if ($('#txtCardNumber').length > 0) {
+            $('#txtCardNumber').addClass('txtCardImg textImg');
+        }
+        $('#txtCardNumber').validateCreditCard(function (result) {
+            if ((result.card_type == null ? '-' : result.card_type.name) != "-") {
+                sessionStorage.setItem('CardType', result.card_type.name);
+                $('#txtCardNumber').attr('style', 'background-image:url("../wp-content/plugins/EComm/images/' + result.card_type.name + '.png")');
+
+            }
+            else {
+                $('#txtCardNumber').attr('style', 'background-image:url("../wp-content/plugins/EComm/images/no_card.png")');
+            }
+            var ValidCard = result.valid;
+            sessionStorage.setItem("ValidCard", ValidCard);
+            if (result.valid == true) {
+                var a = 2;
+                $('.txtValidImg').attr('style', 'background-image:url("../wp-content/plugins/EComm/images/' + result.valid + '.png")');
+            }
+            else {
+                $('.txtValidImg').attr('style', 'background-image:url("../wp-content/plugins/EComm/images/false.png")');
+                return false;
+            }
+        });
+    });
+</script>

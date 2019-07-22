@@ -533,7 +533,7 @@ h2.main {
     }
     .wbox input[type=checkbox], input[type=radio] {
         position: relative;
-        top: 1px;
+        top: -4px;
         margin-right: 3px;
     }
 .textfield{
@@ -543,7 +543,7 @@ h2.main {
 	border:none;
 	outline:none;
 	color:#133a65;
-    margin:5px;
+    margin:3px;
 }
 .textfield1, .textfield2{
 	/*width:calc(100% - 43px);*/
@@ -555,8 +555,8 @@ h2.main {
 	outline:none;
 	color:#133a65;
 }
-.textfield2{
-	/*width:calc(50% - 43px);*/
+.textfield .textfield1, .textfield2{
+	margin: 5px !important;
 }
 .button{
 	font-size:18px;
@@ -579,7 +579,7 @@ h2.main {
 	width:calc( 100% - 300px);
 }
 .price{
-	margin:0px;
+	margin:10px 0px;
 	font-size:30px;
 	color:#83bd00;
 	font-weight:500;
@@ -612,5 +612,124 @@ input {
 }
 
 .wbox .min-height {
-    min-height: 130px;
+    min-height: 250px;
+}
+
+.errors {
+    color:#ff0000;
+}
+
+.textImg {
+    padding-left: 50px !important;
+    background-repeat: no-repeat !important;
+}
+.txtValidImg {
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    position: absolute;
+    padding-top: 30px;
+    margin-top: -30px;
+    right: 20px;
+}
+
+.selected-plan {
+    margin: 15px 0px;
+}
+.table td, .table th {
+    font-size: 14px !important;
+    padding: 7px !important;
+}
+
+.morecontent .more-content {
+    display: none;
+}
+.morelink {
+    display: block;
+    font-size: 12px;
+}
+
+#divPricingSteps {
+    text-align: center;
+    padding: 20px;
+    padding-top: 0px;
+}
+    #divPricingSteps > span {
+        border: 1px solid #133a65 !important;
+        padding: 4px;
+        background-color: #f5f6f5;
+    }
+        #divPricingSteps > span.active {
+            background-color: #64a1d7;
+            color: #fff;
+            cursor: pointer;
+        }
+
+
+#divPricingSteps .badge.active-last {
+    padding: 7px 11px !important;
+}
+#divPricingSteps .badge.active {
+    background-color: #68a2d3 !important;
+}
+#divPricingSteps .badge.active-comp {
+    background-color: #68a2d3 !important;
+}
+#divPricingSteps .badge:not(:last-child) {
+    margin-right: 10px !important;
+}
+#divPricingSteps .badge {
+    background-color: #dedfe1 !important;
+    border-radius: 0px !important;
+    font-size: 60%;
+    font-weight: 500 !important;
+    padding: 5px 8px;
+    z-index: 105 !important;
+    position: relative;
+}
+
+#divPricingSteps .badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+    #divPricingSteps .badge:before,
+    #divPricingSteps .badge:after {
+        content: '';
+        width: 23px; /* size of your margin */
+        border-bottom: 3px solid #dedfe1;
+        position: absolute;
+        top: 53%;
+        z-index: 1;
+        left: 20px;
+    }
+
+    #divPricingSteps .badge:last-child:before {
+        width: 0px; /* size of your margin */
+    }
+
+    #divPricingSteps .badge:first-child:before,
+    #divPricingSteps .badge:last-child:after {
+        display: none !important;
+        border-bottom: 3px solid #fff;
+    }
+
+    #divPricingSteps .badge.active-last {
+        padding: 7px 11px !important;
+    }
+#divPricingSteps {
+    margin: 15px 0px 25px;
+}    
+
+#divPaymentInfo .card-img {
+    width: 32px;
+    height: auto;
 }

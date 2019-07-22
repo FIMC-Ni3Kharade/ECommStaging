@@ -1,0 +1,106 @@
+﻿<div class="row">
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="<?php echo plugin_dir_url( __FILE__ ) . 'images/icon1.png'; ?>" width="44" height="44">
+                <h4 id="hSelectedPlanName5a" class="selected-plan"></h4>
+                <div id="divSelectedPrice5a" class="price hidden selected-price"></div>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div id="divSelectedPlanTerms5a" class="plan-term-list col-md-12">
+            </div>
+        </div>
+        <!--<div class="row form-group">
+            <div class="col-md-12">
+                <div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_module text-left">
+                    <a id="btnMemberDetails" class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" href="javascript:void(0)">Continue</a>
+                </div>
+            </div>
+        </div>-->
+    </div>
+
+    <div class="col-md-8 border-left">
+        <div class="row form-group">
+            <div class="col-sm-12">
+                <b>Family Member Information</b>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-12 errors hidden" id="divDependentErrors">
+
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-6">
+                <input id="txtDepFirstName" type="text" class="textfield2 form-control required" placeholder="First Name" />
+            </div>
+            <div class="col-md-6">
+                <input id="txtDepLastName" type="text" class="textfield2 form-control required" placeholder="Last Name" />
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-md-4">
+                <input id="txtDepBirthDate" type="date" placeholder="Date of Birth" class="textfield2 form-control required">
+            </div>
+            <div class="col-md-4">
+                <select id="ddlDepGender" placeholder="Gender" class="textfield2 form-control required-ddl">
+                    <option value="0" selected>Select Gender</option>
+                    <option value="UN">Undisclosed</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select id="ddlDepRelation" class="textfield2 form-control required-ddl" placeholder="Relation">
+                    <option value="0" selected>Select Relation</option>
+                    <option value="CN">Children</option>
+                    <option value="SP">Spouse</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                Family Members Added
+            </div>
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table table-striped" id="tblDependentInfo">
+                        <thead>
+                            <tr>
+                                <th>
+                                    First Name
+                                </th>
+                                <th>
+                                    Last Name
+                                </th>
+                                <th>
+                                    Relation
+                                </th>
+                                <th>
+                                    Gender
+                                </th>
+                                <th>
+                                    Date of Birth
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="divDependentList"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_module text-left">
+                    <a class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" id="btnSkipFamilyMembers" value="Skip" href="javascript:void(0)">Skip</a>
+                    <a class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" id="btnAddDependent" value="Add Another" href="javascript:void(0)">Add Another</a>
+                    <a class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" id="btnDependentInfo" value="Next" href="javascript:void(0)">Next</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
