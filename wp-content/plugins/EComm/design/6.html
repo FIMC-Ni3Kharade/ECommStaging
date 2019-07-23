@@ -1,26 +1,14 @@
 <div class="row">
     <div class="col-md-4">
-        <div class="row form-group">
+        <div class="row">
             <div class="col-md-12">
                 <img src="<?php echo plugin_dir_url( __FILE__ ) . 'images/icon1.png'; ?>" width="44" height="44">
-                <h4>Auto Plus Plan</h4>
-                <div class="price">$ 19.<sup>99</sup><b>/month</b></div>
+                <h4 id="hCardPlanName" class="selected-plan"></h4>
+                <div id="divCardPrice" class="price hidden selected-price"></div>
             </div>
         </div>
         <div class="row form-group">
-            <div class="col-md-12">
-                <div class="month"><input name="radioMonths" type="radio" value="12">12 Month</div>
-                <div class="month"><input name="radioMonths" type="radio" value="24">24 Month</div>
-                <div class="month"><input name="radioMonths" type="radio" value="36">36 Month</div>
-                <div class="month"><input name="radioMonths" type="radio" value="48">48 Month</div>
-                <div class="month"><input name="radioMonths" type="radio" value="60">60 Month</div>
-            </div>
-        </div>
-        <div class="row form-group">
-            <div class="col-md-12">
-                <div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_module text-left">
-                    <a id="btnCardDetails" class="et_pb_button et_pb_button_1 et_pb_bg_layout_light btn-available" href="javascript:void(0)">Continue</a>
-                </div>
+            <div id="divCardPlanTerms" class="col-md-12 plan-term-list">
             </div>
         </div>
     </div>
@@ -31,27 +19,74 @@
             <div class="row form-group">
                 <div class="col-md-12">
                     <h4>Credit Cards Details</h4>
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12 errors hidden" id="divPaymentErrors">
+
                 </div>
             </div>
             <div class="row form-group">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     Payment Type
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-3">
                     <input name="radioCC" type="radio" value="CC" checked />Credit Card
+                </div>
+                <div class="col-md-6">
+                    <img class="card-img" src="../wp-content/plugins/EComm/images/mastercard.png" />
+                    <img class="card-img" src="../wp-content/plugins/EComm/images/visa.png" />
+                    <img class="card-img" src="../wp-content/plugins/EComm/images/amex.png" />
+                    <img class="card-img" src="../wp-content/plugins/EComm/images/diners_club_international.png" />
+                    <img class="card-img" src="../wp-content/plugins/EComm/images/discover.png" />
+                    <img class="card-img" src="../wp-content/plugins/EComm/images/jcb.png" />
+                    <img class="card-img" src="../wp-content/plugins/EComm/images/laser.png" />
+                    <img class="card-img" src="../wp-content/plugins/EComm/images/visa_electron.png" />
                 </div>
             </div>
             <div class="row form-group">
                 <div class="col-md-12">
-                    <input id="txtNumber" type="text" placeholder="Credit Cards Number" class="textfield1 form-control">
+                    <input class="textfield1 form-control txtCardNumber txtCardImg textImg required-cc" type="text" id="txtCardNumber" data-control-type="TextBox" 
+                           placeholder="Card Number" maxlength="16" style="padding-left: 50px; background-repeat: no-repeat; background-image: url(&quot;../wp-content/plugins/EComm/images/no_card.png&quot;)"/>
+                    <span class="txtValidImg txtCardImg"></span>
                 </div>
             </div>
             <div class="row form-group">
-                <div class="col-md-6">
-                    <input id="txtExpiration" type="text" placeholder="Expiration" class="textfield2 form-control">
+                <div class="col-md-3">
+                    <select id="ddlExpiryMonth" class="form-control textfield required-cc-ddl">
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select id="ddlExpiryYear" class="form-control textfield required-cc-ddl">
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        <option>2026</option>
+                        <option>2027</option>
+                        <option>2028</option>
+                        <option>2029</option>
+                        <option>2030</option>
+                    </select>
                 </div>
                 <div class="col-md-6">
-                    <input id="txtCVV" type="text" placeholder="CVV" class="textfield2 form-control">
+                    <input id="txtCVV" type="text" placeholder="CVV" class="textfield2 form-control required-cc" maxlength="4">
                 </div>
             </div>
             <div class="row form-group">
@@ -64,17 +99,21 @@
         <div id="divBilling" class="hidden">
             <div class="row form-group">
                 <div class="col-md-12">
-                    <input id="txtBillingAddressLine1" type="text" placeholder="Address 1" class="textfield2 form-control">
+                    <div id="divBillingAddrMessage" style="padding-top: 10px;">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <input id="txtBillingAddressLine1" type="text" placeholder="Address 1" class="textfield2 form-control txtBillingAddressLine1 toggle search">
                 </div>
             </div>
             <div class="row form-group">
                 <div class="col-md-12">
-                    <input id="txtBillingAddressLine2" type="text" placeholder="Address 2" class="textfield2 form-control">
+                    <input id="txtBillingAddressLine2" type="text" placeholder="Address 2" class="textfield2 form-control txtBillingAddressLine1">
                 </div>
             </div>
             <div class="row form-group">
                 <div class="col-md-5">
-                    <input id="txtBillingCity" type="text" placeholder="City" class="textfield2 form-control">
+                    <input id="txtBillingCity" type="text" placeholder="City" class="textfield2 form-control txtBillingAddressLine1">
                 </div>
                 <div class="col-md-4">
                     <select id="ddlBillingState" class="form-control textfield form-control">
@@ -88,7 +127,15 @@
                     </select>
                 </div>
                 <div class="col-md-3">
-                    <input id="txtBillingZip" type="text" placeholder="Zip" class="textfield2 form-control">
+                    <input id="txtBillingZip" type="text" placeholder="Zip" class="textfield2 form-control txtBillingAddressLine1">
+                </div>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-12">
+                <div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_module text-right">
+                    <a id="btnCardDetails" class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" href="javascript:void(0)">Continue</a>
                 </div>
             </div>
         </div>

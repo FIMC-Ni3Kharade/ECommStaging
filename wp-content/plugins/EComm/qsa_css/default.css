@@ -1,0 +1,224 @@
+﻿
+
+.searchContainer
+{
+    width: 45em;
+}
+
+#submit
+{
+    width: 60px;
+}
+
+#reset
+{
+    width: 60px;
+}
+
+#buttonDiv
+{
+    margin: 0 0 0 11em;
+}
+
+.searchBox
+{
+    margin: 14px .3em 0 .3em;
+}
+
+.searchButton
+{
+    width: 60px;
+    padding: .25em 0 .25em 0;
+    margin-right: .5em;
+}
+/*
+.refineContainer {
+    border: 1px solid grey;
+    padding: 0em 1em 1em 1em;
+    margin-top: 1em;
+}
+*/
+
+.emailPicklistHeader
+{
+    padding-right: 1em;
+    margin: .8em 1em 0 .6em;
+    white-space: nowrap;
+}
+
+.refineHeader
+{
+    display: block;
+    font-weight: bold;
+    margin: .6em 0 .6em;
+}
+
+.refineText
+{
+    display: block;
+    margin: .6em 0 .6em;
+}
+
+.refineButton
+{
+    margin: 0 1em .5em 0;
+}
+
+.refineError
+{
+    margin: .6em 0 -.6em;
+    display: block;
+    color: red;
+}
+
+.picklist
+{
+    list-style-type: none;
+    padding: 0; /*margin-top: 1em; border: 1px solid rgb(169, 169, 169); */
+    height: 15em;
+    overflow: auto;
+}
+
+.picklistItem
+{
+    padding-right: 1em;
+    margin: .8em 1em 0 .6em;
+    white-space: nowrap;
+}
+
+.hidden
+{
+    display: none;
+}
+
+.loading
+{
+    background-image: url("../qsa_content/loading.gif");
+    background-repeat: no-repeat;
+    margin-top: .8em;
+    padding-left: 2em;
+    height: 16px;
+}
+
+.error
+{
+    border-color: red;
+    /*border-style: solid;
+    background-color: antiquewhite;*/
+}
+
+.errorImg
+{
+    /*background-image: url("../qsa_content/error.png");*/
+    background-repeat: no-repeat;
+    background-position: .4em center;
+    display: block;
+    padding: .75em 1.5em .75em 3em;
+    color: red;
+    font-weight: bold;
+}
+
+.error-inline
+{
+    background-image: url("../wp-content/plugins/EComm/qsa_content/error.png");
+    background-repeat: no-repeat;
+    background-position: .4em center;
+    padding: .4em 1.5em .4em 3em;
+    color: red;
+    font-weight: bold;
+}
+
+.success
+{
+    /*border-color: green;
+    border-style: solid;
+    background-color: honeydew;*/
+}
+
+.successImg
+{
+    background-image: url("../wp-content/plugins/EComm/qsa_content/success.png");
+    background-repeat: no-repeat;
+    background-position: .4em center;
+    display: block;
+    margin-top: .8em;
+    padding: .75em 1.5em .75em 3em;
+    color: green;
+    font-weight: bold;
+    margin-left: 11em;
+}
+
+.success-inline
+{
+    background-image: url("../wp-content/plugins/EComm/qsa_content/success.png");
+    background-repeat: no-repeat;
+    margin-top: .8em;
+    background-position: .4em center;
+    padding: .75em 1.5em .75em 3em;
+    color: green;
+    font-weight: bold;
+}
+
+.emailPicklist
+{
+    list-style-type: none;
+    padding: 0;
+    height: 6em;
+    overflow: auto;
+    margin-top: -1px;
+}
+
+.correctionEmail
+{
+    width: 45em;
+    border: 1px solid rgb(169, 169,169);
+    margin-top: 1em;
+}
+
+span.success
+{
+    position: relative;
+    left: 15em;
+    border: 1px solid green;
+}
+
+.closeButton
+{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+    background: -moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background: -webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background: -o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background: -ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+    background-color: #ededed;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+    color: #777777;
+    font-family: arial;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 1px 5px;
+    text-decoration: none;
+    float: right;
+    margin: 2px 1px 2px 0;
+}
+.closeButton:hover
+{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+    background: -moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background: -webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background: -o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background: -ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+    background-color: #dfdfdf;
+}
+.closeButton:active
+{
+    position: relative;
+    top: 1px;
+}
