@@ -8,3 +8,4 @@
 {"user_id":7,"user_login":"gravindran@fimc.com","user_remoteaddr":"54.191.137.17","user_hostname":"ec2-54-191-137-17.us-west-2.compute.amazonaws.com","user_lastlogin":"2019-07-19 14:39:39"}
 {"user_id":7,"user_login":"gravindran@fimc.com","user_remoteaddr":"54.191.137.17","user_hostname":"ec2-54-191-137-17.us-west-2.compute.amazonaws.com","user_lastlogin":"2019-07-19 14:43:13"}
 {"user_id":8,"user_login":"nkharade@fimc.com","user_remoteaddr":"173.45.170.132","user_hostname":"ip-173-45-170-132.datasitecolo.com","user_lastlogin":"2019-07-22 11:07:26"}
+{"user_id":8,"user_login":"nkharade@fimc.com","user_remoteaddr":"173.45.170.132","user_hostname":"ip-173-45-170-132.datasitecolo.com","user_lastlogin":"2019-07-22 13:22:31"}

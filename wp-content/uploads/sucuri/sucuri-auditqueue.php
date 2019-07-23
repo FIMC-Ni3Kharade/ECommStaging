@@ -28,3 +28,5 @@ exit(0);
 1563800963_173:"Notice: nkharade@fimc.com, 173.45.170.132; Revision status has been changed; details: ID: 5620,Old status: new,New status: inherit,Title: ECommLanding"
 1563800963_5695:"Warning: nkharade@fimc.com, 173.45.170.132; Post deleted: (multiple entries): Post id: 5619,Post author: 8,Post type: revision,Post status: inherit,Post inserted: 2019-07-22 13:09:12,Post modified: 2019-07-22 13:09:12,Post guid: http:\/\/mng.b0b.myftpupload.com\/2019\/07\/5568-autosave-v1\/,Post title: (empty)"
 1563800963_8942:"Notice: nkharade@fimc.com, 173.45.170.132; Page was updated; ID: 5568; name: ECommLanding"
+1563801751_6954:"Notice: 173.45.170.132; User authentication succeeded: nkharade@fimc.com"
+1563801756_1932:"Notice: nkharade@fimc.com, 173.45.170.132; Post status has been changed; details: ID: 5621,Old status: new,New status: auto-draft,Title: Auto Draft"
